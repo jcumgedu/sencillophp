@@ -3,6 +3,7 @@
 # Add steps that run tests and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/php
 
+
 trigger:
 - main
 
@@ -32,6 +33,8 @@ stages:
     pool:
       vmImage: $(vmImageName)
     steps:
+    - script: composer install --no-interaction --prefer-dist
+      displayName: 'Composer install'
     - script: |
         sudo update-alternatives --set php /usr/bin/php$(phpVersion)
         sudo update-alternatives --set phar /usr/bin/phar$(phpVersion)
