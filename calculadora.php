@@ -5,7 +5,7 @@
 		<title>Operadores Aritm&eacute;meticos</title>
 	</head>
 	<body>
-		<h1>Calculadora</h1>
+		<h1>bienvenido a calculadora php</h1>
 		<form action="resultado.php" method="post">
 			<select name="operador">
 				<option value="suma">Suma</option>
